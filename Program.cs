@@ -9,12 +9,14 @@ namespace Snake
             Console.WriteLine("***********Welcome To Snake And Ladder************");
             int Position = 0;
             int Win = 100;
+            int DiceCount = 0;
             while (Position != 100)
             {
+
                 Random Dice = new Random();
-                int Option = Dice.Next(0, 4);
+                int Option = Dice.Next(1, 4);
                 int RollDice = Dice.Next(1, 7);
-                Console.WriteLine(RollDice);
+                DiceCount++;
                 switch (Option)
                 {
                     case 1:
@@ -31,7 +33,7 @@ namespace Snake
                 }
                 if (Position == Win)
                 {
-                    Console.WriteLine(" Winner");
+                    Console.WriteLine("...... Winner ..... \n RollDice {0} Time",DiceCount);
                     break;
                 }
             }
