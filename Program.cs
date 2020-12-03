@@ -8,7 +8,7 @@ namespace Snake
         {
             Console.WriteLine("***********Welcome To Snake And Ladder************");
             int Position = 0;
-
+            int Win = 100;
             while (Position != 100)
             {
                 Random Dice = new Random();
@@ -28,6 +28,11 @@ namespace Snake
                         Console.WriteLine("Snake Bit You...");
                         Position -= RollDice;
                         break;
+                }
+                if (Position == Win)
+                {
+                    Console.WriteLine(" Winner");
+                    break;
                 }
             }
         }
